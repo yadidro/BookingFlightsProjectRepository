@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "jDuDDIO5p82XPNDuQ+ql4oqvVcrhnNWkVnGESABuIYg=",
-  "Source": "BookingFlightService",
-  "BasePath": "_content/BookingFlightService",
+  "Hash": "pBOHb/05jUPs+/B7okPk7O4pjMSj5b1wd4nyvkVdPCg=",
+  "Source": "BookingFlightAPI",
+  "BasePath": "_content/BookingFlightAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

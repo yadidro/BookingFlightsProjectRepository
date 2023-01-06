@@ -1,0 +1,15 @@
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\bin\Debug\net7.0\BookingFlightBL.deps.json
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\bin\Debug\net7.0\BookingFlightBL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\bin\Debug\net7.0\BookingFlightBL.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\bin\Debug\net7.0\BookingFlightDAL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\bin\Debug\net7.0\BookingFlightDAL.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.csproj.AssemblyReference.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.AssemblyInfoInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.AssemblyInfo.cs
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.csproj.CoreCompileInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.csproj.CopyComplete
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\refint\BookingFlightBL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\BookingFlightBL.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightBL\obj\Debug\net7.0\ref\BookingFlightBL.dll

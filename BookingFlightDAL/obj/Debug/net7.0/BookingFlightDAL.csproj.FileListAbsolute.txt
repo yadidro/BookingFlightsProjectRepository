@@ -1,0 +1,14 @@
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\BookingFlightDAL.deps.json
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\BookingFlightDAL.runtimeconfig.json
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\BookingFlightDAL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\BookingFlightDAL.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.csproj.AssemblyReference.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.AssemblyInfoInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.AssemblyInfo.cs
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.csproj.CoreCompileInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\refint\BookingFlightDAL.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.genruntimeconfig.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\ref\BookingFlightDAL.dll
