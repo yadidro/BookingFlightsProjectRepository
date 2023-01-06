@@ -1,8 +1,8 @@
-﻿using BookingFlightService.DBContexts;
-using BookingFlightService.Models;
-using BookingFlightService.Requests;
+﻿using BookingFlightService.BookingFlightBL.Requests;
+using BookingFlightService.BookingFlightDAL.DBContexts;
+using BookingFlightService.BookingFlightDAL.Models;
 
-namespace BookingFlightService.Repositories
+namespace BookingFlightService.BookingFlightBL.Repositories
 {
     public interface IBookingRepository
     {
@@ -27,16 +27,16 @@ namespace BookingFlightService.Repositories
 
         public void SaveBooking(BookingRequest bookingRequest)
         {
-                var booking = new Booking()
-                {
-                    PassengerName = bookingRequest.PassengerName,
-                    Seat = bookingRequest.Seat,
-                    Date = bookingRequest.Date,
-                };
+            var booking = new Booking()
+            {
+                PassengerName = bookingRequest.PassengerName,
+                Seat = bookingRequest.Seat,
+                Date = bookingRequest.Date,
+            };
 
-                _context.Bookings.Add(booking);
+            _context.Bookings.Add(booking);
 
-                _context.SaveChanges();        
+            _context.SaveChanges();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace BookingFlightService.Models
+namespace BookingFlightService.BookingFlightDAL.Models
 {
     public class Booking
     {

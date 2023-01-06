@@ -1,9 +1,9 @@
-﻿using BookingFlightService.Models;
+﻿using BookingFlightService.BookingFlightDAL.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
-namespace BookingFlightService.DBContexts
+namespace BookingFlightService.BookingFlightDAL.DBContexts
 {
     public class BookingContext : DbContext
     {
@@ -14,15 +14,15 @@ namespace BookingFlightService.DBContexts
 
         public BookingContext(DbContextOptions<BookingContext> options, IConfiguration configuration) : base(options)
         {
-            this._configuration = configuration;
-            DbConnection = new SqlConnection(this._configuration.GetConnectionString("DatabaseConnection"));
+            _configuration = configuration;
+            DbConnection = new SqlConnection(_configuration.GetConnectionString("DatabaseConnection"));
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(this._configuration.GetConnectionString("DatabaseConnection"));
+                optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DatabaseConnection"));
             }
         }
     }

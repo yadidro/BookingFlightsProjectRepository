@@ -1,5 +1,5 @@
-using BookingFlightService.DBContexts;
-using BookingFlightService.Repositories;
+using BookingFlightService.BookingFlightBL.Repositories;
+using BookingFlightService.BookingFlightDAL.DBContexts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

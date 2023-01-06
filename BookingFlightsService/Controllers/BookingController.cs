@@ -1,6 +1,5 @@
-using BookingFlightService.Models;
-using BookingFlightService.Repositories;
-using BookingFlightService.Requests;
+using BookingFlightService.BookingFlightBL.Repositories;
+using BookingFlightService.BookingFlightBL.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyMicroservice.Controllers;

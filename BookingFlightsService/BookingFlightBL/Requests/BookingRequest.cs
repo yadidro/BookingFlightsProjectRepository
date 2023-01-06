@@ -1,4 +1,4 @@
-﻿namespace BookingFlightService.Requests
+﻿namespace BookingFlightService.BookingFlightBL.Requests
 {
     public class BookingRequest
     {
