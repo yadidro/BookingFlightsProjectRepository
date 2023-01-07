@@ -24,10 +24,20 @@ public class BookingController : ControllerBase
     {
         try
         {
-            return Ok(_bookingRepository.GetAllBookings());
+            _logger.LogInformation("Got Get request at {DT}",
+           DateTime.UtcNow.ToLongTimeString());
+
+            var res = _bookingRepository.GetAllBookings();
+
+            _logger.LogInformation("Get request sucseesfully handeld {DT}",
+         DateTime.UtcNow.ToLongTimeString());
+
+            return Ok(res);
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
+
             return BadRequest(e.Message);
         }
     }
@@ -38,11 +48,20 @@ public class BookingController : ControllerBase
     {
         try
         {
+            _logger.LogInformation("Got booking request at {DT}",
+           DateTime.UtcNow.ToLongTimeString());
+
             _bookingRepository.SaveBooking(bookingRequest);
+
+            _logger.LogInformation("booking request sucseesfully handeld {DT}",
+          DateTime.UtcNow.ToLongTimeString());
+
             return Ok();
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
+
             return BadRequest(e.Message);
         }
     }

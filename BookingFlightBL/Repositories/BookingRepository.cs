@@ -1,5 +1,4 @@
 ﻿using BookingFlightBL;
-using BookingFlightDAL.Models;
 using BookingFlightService.BookingFlightBL.Requests;
 using BookingFlightService.BookingFlightDAL.DBContexts;
 using BookingFlightService.BookingFlightDAL.Models;
