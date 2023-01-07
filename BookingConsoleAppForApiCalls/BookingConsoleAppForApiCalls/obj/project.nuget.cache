@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Pn39/5THr6nBhS1iIMiWtGAxhgsUe/MADnFB7IsT9zEMbPy0IwTrlKowpI7IDU7FNOt+W1tv6kAg9lG3n7DlpA==",
+  "dgSpecHash": "o4kMsLw8AJkxtSc3JlR4sEnUT8yJNUzHyJQZ4uBFd0zeNgq18757TPnf6rYY53RW+n3BLprCClxW0QZw4EH8aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\97252\\source\\repos\\BookingFlightsSystem\\BookingConsoleAppForApiCalls\\BookingConsoleAppForApiCalls\\BookingConsoleAppForApiCalls.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\97252\\source\\repos\\BookingFlightsSystem\\BookingConsoleAppForApiCalls\\BookingConsoleAppForApiCalls\\ConsoleEventManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\97252\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

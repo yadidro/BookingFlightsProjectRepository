@@ -1,0 +1,15 @@
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\bin\Debug\net7.0\BookingConsoleAppForApiCalls.exe
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\bin\Debug\net7.0\BookingConsoleAppForApiCalls.deps.json
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\bin\Debug\net7.0\BookingConsoleAppForApiCalls.runtimeconfig.json
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\bin\Debug\net7.0\BookingConsoleAppForApiCalls.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\bin\Debug\net7.0\BookingConsoleAppForApiCalls.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.csproj.AssemblyReference.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.AssemblyInfoInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.AssemblyInfo.cs
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.csproj.CoreCompileInputs.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\refint\BookingConsoleAppForApiCalls.dll
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.pdb
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\BookingConsoleAppForApiCalls.genruntimeconfig.cache
+C:\Users\97252\source\repos\BookingFlightsSystem\BookingConsoleAppForApiCalls\BookingConsoleAppForApiCalls\obj\Debug\net7.0\ref\BookingConsoleAppForApiCalls.dll
