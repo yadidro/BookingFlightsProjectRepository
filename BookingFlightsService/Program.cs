@@ -1,3 +1,4 @@
+using BookingFlightBL;
 using BookingFlightService.BookingFlightBL.Repositories;
 using BookingFlightService.BookingFlightDAL.DBContexts;
 using Microsoft.EntityFrameworkCore;
@@ -11,8 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookingContext>(
-      options => options.UseSqlServer("name=ConnectionStrings:DatabaseConnection"));
-builder.Services.AddTransient<IBookingRepository, BookingRepository>();
+      options => options.UseSqlServer("name=ConnectionStrings:DatabaseConnection"), ServiceLifetime.Singleton);
+builder.Services.AddSingleton<IBookingValidator, BookingValidator>();
+builder.Services.AddSingleton<IBookingRepository, BookingRepository>();
 
 var app = builder.Build();
 
