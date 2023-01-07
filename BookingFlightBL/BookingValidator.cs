@@ -1,6 +1,7 @@
 ﻿using BookingFlightService.BookingFlightBL.Requests;
 using BookingFlightService.BookingFlightDAL.DBContexts;
 using BookingFlightService.BookingFlightDAL.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text.RegularExpressions;
 
@@ -14,15 +15,16 @@ namespace BookingFlightBL
 
     public class BookingValidator : IBookingValidator
     {
+        private object privateLock = new object();
+
         IDictionary<DateTime, IDictionary<string, bool>> ExistingBookings;
 
         List<string> SeatsList;
 
-        private readonly BookingContext _context;
-
-        public BookingValidator(BookingContext context)
+        private readonly IConfiguration _configuration;
+        public BookingValidator(IConfiguration configuration)
         {
-            _context = context;
+            _configuration = configuration;
             SeatsList = GetAllSeats();
             ExistingBookings = GetExistingBookings();
         }
@@ -47,20 +49,29 @@ namespace BookingFlightBL
             if (!IsSeatExist(bookingRequest.Seat))
                 throw new ArgumentException("The seat does not exist");
 
-            if (IsSeatAlreadyTaken(bookingRequest))
-                throw new ArgumentException("The seat is already taken");
+            lock (privateLock)
+            {
+                if (IsSeatAlreadyTaken(bookingRequest))
+                    throw new ArgumentException("The seat is already taken");
 
-            UpdateExistingBookings(bookingRequest);
+                UpdateExistingBookings(bookingRequest);
+            }
         }
 
         private List<string> GetAllSeats()
         {
-            return _context.Seats.Select(seat => seat.Place).ToList();
+            using (BookingContext context = new BookingContext(_configuration))
+            {
+                return context.Seats.Select(seat => seat.Place).ToList();
+            };  
         }
 
         private IEnumerable<Booking> GetAllBookings()
         {
-            return _context.Bookings.ToList();
+            using (BookingContext context = new BookingContext(_configuration))
+            {
+                return context.Bookings.ToList();
+            };
         }
 
         private IDictionary<DateTime, IDictionary<string, bool>> GetExistingBookings()

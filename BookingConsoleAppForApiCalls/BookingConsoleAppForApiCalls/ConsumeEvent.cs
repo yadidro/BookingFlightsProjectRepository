@@ -1,5 +1,8 @@
-﻿using System.Net;
+﻿using System.Diagnostics.Metrics;
+using System.Net;
 using System.Net.Http.Json;
+using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleEventManager
 {
@@ -16,14 +19,14 @@ namespace ConsoleEventManager
             }
         }
 
-        public async Task PostEvent_data(int seatValue) 
-        {
+        public async Task PostEvent_data(int dayToAddValue) 
+        {      
             using (var client = new HttpClient())
             {
                 var bookingRequest = new BookingRequest(); 
                 bookingRequest.PassengerName = "Roy";
-                bookingRequest.Seat = seatValue.ToString();
-                bookingRequest.Date = DateTime.Now;
+                bookingRequest.Seat = "3F";
+                bookingRequest.Date = DateTime.Now.AddDays(dayToAddValue);
                 JsonContent content = JsonContent.Create(bookingRequest);
                 await client.PostAsync("http://localhost:5294/bookings", content);
 

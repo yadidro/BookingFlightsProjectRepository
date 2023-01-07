@@ -20,6 +20,11 @@ namespace BookingFlightService.BookingFlightDAL.DBContexts
 
         private readonly IConfiguration _configuration;
 
+        public BookingContext(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public BookingContext(DbContextOptions<BookingContext> options, IConfiguration configuration) : base(options)
         {
             _configuration = configuration;

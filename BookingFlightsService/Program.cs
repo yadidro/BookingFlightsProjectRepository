@@ -12,9 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookingContext>(
-      options => options.UseSqlServer("name=ConnectionStrings:DatabaseConnection"), ServiceLifetime.Singleton);
+      options => options.UseSqlServer("name=ConnectionStrings:DatabaseConnection"));
 builder.Services.AddSingleton<IBookingValidator, BookingValidator>();
-builder.Services.AddSingleton<IBookingRepository, BookingRepository>();
+builder.Services.AddTransient<IBookingRepository, BookingRepository>();
 
 var app = builder.Build();
 
