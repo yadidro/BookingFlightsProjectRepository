@@ -17,7 +17,7 @@ namespace BookingFlightBL
     {
         private object privateLock = new object();
 
-        IDictionary<DateTime, IDictionary<string, bool>> ExistingBookings;
+        IDictionary<string, IDictionary<string, bool>> ExistingBookings;
 
         List<string> SeatsList;
 
@@ -74,21 +74,22 @@ namespace BookingFlightBL
             };
         }
 
-        private IDictionary<DateTime, IDictionary<string, bool>> GetExistingBookings()
+        private IDictionary<string, IDictionary<string, bool>> GetExistingBookings()
         {
-            IDictionary<DateTime, IDictionary<string, bool>> existingBookings = new Dictionary<DateTime, IDictionary<string, bool>>();
+            IDictionary<string, IDictionary<string, bool>> existingBookings = new Dictionary<string, IDictionary<string, bool>>();
             var listOfBookings = GetAllBookings();
             foreach (var booking in listOfBookings)
             {
-                if (existingBookings.ContainsKey(booking.Date))
+                var dateInString = booking.Date.ToString("MM/dd/yyyy hh:mm");
+                if (existingBookings.ContainsKey(dateInString))
                 {
-                    existingBookings[booking.Date][booking.Seat] = true;
+                    existingBookings[dateInString][booking.Seat] = true;
                 }
                 else
                 {
-                    existingBookings.Add(booking.Date, new Dictionary<string, bool>());
+                    existingBookings.Add(dateInString, new Dictionary<string, bool>());
                     foreach (var seat in SeatsList)
-                        existingBookings[booking.Date].Add(seat, false);
+                        existingBookings[dateInString].Add(seat, false);
                 }
             }
             return existingBookings;
@@ -101,21 +102,23 @@ namespace BookingFlightBL
 
         private bool IsSeatAlreadyTaken(BookingRequest bookingRequest)
         {
-            if (!ExistingBookings.ContainsKey(bookingRequest.Date))
+            var dateInString = bookingRequest.Date.ToString("MM/dd/yyyy hh:mm");
+            if (!ExistingBookings.ContainsKey(dateInString))
                 return false;
-            return ExistingBookings[bookingRequest.Date][bookingRequest.Seat];
+            return ExistingBookings[dateInString][bookingRequest.Seat];
         }
 
         private void UpdateExistingBookings(BookingRequest bookingRequest)
         {
-            if (!ExistingBookings.ContainsKey(bookingRequest.Date))
+            var dateInString = bookingRequest.Date.ToString("MM/dd/yyyy hh:mm");
+            if (!ExistingBookings.ContainsKey(dateInString))
             {
-                ExistingBookings.Add(bookingRequest.Date, new Dictionary<string, bool>());
+                ExistingBookings.Add(dateInString, new Dictionary<string, bool>());
                 foreach (var seat in SeatsList)
-                    ExistingBookings[bookingRequest.Date].Add(seat, false);
+                    ExistingBookings[dateInString].Add(seat, false);
 
             }
-            ExistingBookings[bookingRequest.Date][bookingRequest.Seat] = true;
+            ExistingBookings[dateInString][bookingRequest.Seat] = true;
         }
     }
 }
