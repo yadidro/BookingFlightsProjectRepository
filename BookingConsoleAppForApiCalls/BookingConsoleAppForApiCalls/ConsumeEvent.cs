@@ -14,7 +14,7 @@ namespace ConsoleEventManager
             {
                 client.Headers.Add("Content-Type:application/json");
                 client.Headers.Add("Accept:application/json");
-                var result = client.DownloadString("http://localhost:5294/bookings"); 
+                var result = client.DownloadString("http://20.103.166.152/bookings"); 
                 Console.WriteLine(Environment.NewLine + result);
             }
         }
@@ -28,7 +28,7 @@ namespace ConsoleEventManager
                 bookingRequest.Seat = "3F";
                 bookingRequest.Date = DateTime.Now.AddDays(dayToAddValue);
                 JsonContent content = JsonContent.Create(bookingRequest);
-                await client.PostAsync("http://localhost:5294/bookings", content);
+                await client.PostAsync("http://20.103.166.152/bookings", content);
 
             }
         }

@@ -12,5 +12,3 @@ C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7
 C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.pdb
 C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\BookingFlightDAL.genruntimeconfig.cache
 C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\obj\Debug\net7.0\ref\BookingFlightDAL.dll
-C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\97252\source\repos\BookingFlightsSystem\BookingFlightDAL\bin\Debug\net7.0\appsettings.json

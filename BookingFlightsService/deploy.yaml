@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: mymicroservice
-        image: royadid785/mymicroservice:latest
+        image: royadid785/bookingflightapi:latest
         ports:
         - containerPort: 80
         env:
