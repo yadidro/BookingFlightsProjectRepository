@@ -44,7 +44,7 @@ public class BookingController : ControllerBase
 
     [Route("bookings")]
     [HttpPost]
-    public IActionResult Postbookings([FromBody] BookingRequest bookingRequest)
+    public IActionResult PostBookings([FromBody] BookingRequest bookingRequest)
     {
         try
         {
@@ -53,7 +53,7 @@ public class BookingController : ControllerBase
 
             _bookingRepository.SaveBooking(bookingRequest);
 
-            _logger.LogInformation("booking request sucseesfully handeld {DT}",
+            _logger.LogInformation("booking request successfully handled {DT}",
           DateTime.UtcNow.ToLongTimeString());
 
             return Ok();

@@ -12,9 +12,9 @@ namespace BookingFlightService.BookingFlightDAL.DBContexts
     {
         public DbSet<Booking> Bookings { get; set; }
 
-        public readonly List<string> LettersForSeats = new List<string>() { "A", "B", "C", "D", "E", "F" };
+        private readonly List<string> LettersForSeats = new List<string>() { "A", "B", "C", "D", "E", "F" };
 
-        public const int NUMBER_OF_LINES = 10;
+        private const int NUMBER_OF_LINES = 10;
 
         public DbSet<Seat> Seats { get; set; }
 

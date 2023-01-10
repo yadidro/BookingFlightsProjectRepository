@@ -15,18 +15,18 @@ namespace BookingFlightBL
 
     public class BookingValidator : IBookingValidator
     {
-        private object privateLock = new object();
+        private readonly object _privateLock = new object();
 
-        IDictionary<string, IDictionary<string, bool>> ExistingBookings;
+        readonly IDictionary<string, IDictionary<string, bool>> _existingBookings;
 
-        List<string> SeatsList;
+        readonly List<string> _seatsList;
 
         private readonly IConfiguration _configuration;
         public BookingValidator(IConfiguration configuration)
         {
             _configuration = configuration;
-            SeatsList = GetAllSeats();
-            ExistingBookings = GetExistingBookings();
+            _seatsList = GetAllSeats();
+            _existingBookings = GetExistingBookings();
         }
 
         public void ValidateBooking(BookingRequest bookingRequest)
@@ -49,7 +49,7 @@ namespace BookingFlightBL
             if (!IsSeatExist(bookingRequest.Seat))
                 throw new ArgumentException("The seat does not exist");
 
-            lock (privateLock)
+            lock (_privateLock)
             {
                 if (IsSeatAlreadyTaken(bookingRequest))
                     throw new ArgumentException("The seat is already taken");
@@ -88,7 +88,7 @@ namespace BookingFlightBL
                 else
                 {
                     existingBookings.Add(dateInString, new Dictionary<string, bool>());
-                    foreach (var seat in SeatsList)
+                    foreach (var seat in _seatsList)
                         existingBookings[dateInString].Add(seat, false);
                 }
             }
@@ -97,28 +97,28 @@ namespace BookingFlightBL
 
         private bool IsSeatExist(string seat)
         {
-            return SeatsList.Contains(seat);
+            return _seatsList.Contains(seat);
         }
 
         private bool IsSeatAlreadyTaken(BookingRequest bookingRequest)
         {
             var dateInString = bookingRequest.Date.ToString("MM/dd/yyyy hh:mm");
-            if (!ExistingBookings.ContainsKey(dateInString))
+            if (!_existingBookings.ContainsKey(dateInString))
                 return false;
-            return ExistingBookings[dateInString][bookingRequest.Seat];
+            return _existingBookings[dateInString][bookingRequest.Seat];
         }
 
         private void UpdateExistingBookings(BookingRequest bookingRequest)
         {
             var dateInString = bookingRequest.Date.ToString("MM/dd/yyyy hh:mm");
-            if (!ExistingBookings.ContainsKey(dateInString))
+            if (!_existingBookings.ContainsKey(dateInString))
             {
-                ExistingBookings.Add(dateInString, new Dictionary<string, bool>());
-                foreach (var seat in SeatsList)
-                    ExistingBookings[dateInString].Add(seat, false);
+                _existingBookings.Add(dateInString, new Dictionary<string, bool>());
+                foreach (var seat in _seatsList)
+                    _existingBookings[dateInString].Add(seat, false);
 
             }
-            ExistingBookings[dateInString][bookingRequest.Seat] = true;
+            _existingBookings[dateInString][bookingRequest.Seat] = true;
         }
     }
 }
